@@ -15,3 +15,9 @@ H5EDirection class >> enumDecl [
 
 	^ #( H5E_WALK_UPWARD 0 H5E_WALK_DOWNWARD 	1)
 ]
+
+{ #category : #initialization }
+H5EDirection class >> initialize [
+
+	self initializeEnumeration
+]

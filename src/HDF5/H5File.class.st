@@ -21,7 +21,7 @@ H5File class >> create: aFileReference [
 	fileId < 0 ifTrue: [ H5Error signal: 'Cannot create file ' , aFileReference asString ].
 
 	^ self new
-		  fileId: (fileId);
+		  fileId: fileId;
 		  yourself
 ]
 
@@ -39,7 +39,8 @@ H5File class >> ffiHF5open: fileName flags: flags accessPropertyList: apl [
 
 { #category : #protocol }
 H5File class >> open: aFileReference [
-
+	"Opening a file. Raise and error if the file is not already created."
+	
 	| fileId |
 	fileId := self
 		          ffiHF5open: aFileReference fullName

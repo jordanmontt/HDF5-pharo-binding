@@ -1,3 +1,6 @@
+"
+https://deusyss.developpez.com/tutoriels/Python/hdf5/
+"
 Class {
 	#name : #H5FileTest,
 	#superclass : #TestCase,
@@ -24,7 +27,7 @@ H5FileTest >> testCreatingNonExistingFileWorks [
 ]
 
 { #category : #tests }
-H5FileTest >> testOpenNonExistingClassThrowsAnError [
+H5FileTest >> testOpenNonExistingFileThrowsAnError [
 
 	self
 		should: [ H5File open: '/tmp/lala.hdf5' asFileReference ]
